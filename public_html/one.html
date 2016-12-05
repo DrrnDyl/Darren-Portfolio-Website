@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	
-	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-	
-	<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+	<head>
+		<meta charset="UTF-8">
 
-	<link href="https://fonts.googleapis.com/css?family=Maitree:300|Open+Sans:300" rel="stylesheet">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<meta charset="UTF-8">
-<title>Darren Doyle</title>
-</head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css?family=Maitree:300|Open+Sans:300" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+		<title>Darren Doyle</title>
+	</head>
 <body>
 	<div id="header">
 		<a href="index.html"><h1>Darren Doyle</h1></a>
@@ -96,68 +97,44 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$('document').ready(function(){
-		$('#one').mouseenter(function(){
-			$('#visible').css("display", "none");
-			$('#hide').css("display", "block");
-			$('#hide').addClass('animated fadeIn');
-		});
-	});
-
-	$('document').ready(function(){
-		$('#one').mouseleave(function(){
-			$("#hide").removeClass('animated fadeIn');
-			$('#hide').css("display", "none");
-			$('#visible').addClass('animated fadeIn');
-			$("#visible").css("display", "block");
-		});
-	});
-
-		$('document').ready(function(){
+			$('#one').mouseenter(function(){
+				$('#visible').css("display", "none");
+				$('#hide').css("display", "block");
+				$('#hide').addClass('animated fadeIn');
+			});
+			$('#one').mouseleave(function(){
+				$("#hide").removeClass('animated fadeIn');
+				$('#hide').css("display", "none");
+				$('#visible').addClass('animated fadeIn');
+				$("#visible").css("display", "block");
+			});
 			$('#two').mouseenter(function(){
 				$('#visible').css("display", "none");
 				$('#hide-two').css("display", "block");
 				$('#hide-two').addClass('animated fadeIn');
 			});
-		});
-
-
-		$('document').ready(function(){
 			$('#two').mouseleave(function(){
 				$("#hide-two").removeClass('animated fadeIn');
 				$("#hide-two").css("display", "none");
 				$('#visible').addClass('animated fadeIn');
 				$('#visible').css("display", "block");
 			});
-		});
-
-			$('document').ready(function(){
 			$('#three').mouseenter(function(){
 				$('#visible').css("display", "none");
 				$('#hide-three').css("display", "block");
 				$('#hide-three').addClass('animated fadeIn');
 			});
-		});
-
-
-		$('document').ready(function(){
 			$('#three').mouseleave(function(){
 				$("#hide-three").removeClass('animated fadeIn');
 				$("#hide-three").css("display", "none");
 				$('#visible').addClass('animated fadeIn');
 				$('#visible').css("display", "block");
 			});
-		});
-
-			$('document').ready(function(){
 			$('#four').mouseenter(function(){
 				$('#visible').css("display", "none");
 				$('#hide-four').css("display", "block");
 				$('#hide-four').addClass('animated fadeIn');
 			});
-		});
-
-
-		$('document').ready(function(){
 			$('#four').mouseleave(function(){
 				$("#hide-four").removeClass('animated fadeIn');
 				$("#hide-four").css("display", "none");
