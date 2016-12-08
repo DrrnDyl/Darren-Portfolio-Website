@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-
+	
 	<link href="https://fonts.googleapis.com/css?family=Maitree:300|Open+Sans:300|Lato:700" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -16,9 +16,9 @@
 	<div id="header">
 		<ul class="nav-bar-mobile">
 			<a href="index.html"><li>Home</li></a>
+			<a href="one.html"><li>Video</li></a>
 			<a href="two.html"><li>Illustrations</li></a>
-			<a href="three.html"><li>Animations</li></a>
-			<a href="four.html"><li>Music</li>
+			<a href="three.html"><li>Animations</li>
 		</ul>
 		<a href="index.html" id="name-home"><h1>Darren Doyle</h1></a>
 	</div>
@@ -27,7 +27,7 @@
 			<div class="nest">
 				<ul class="nav-button">
 					<li>
-						<a href="one.html" class="circle-button circle-active" id="one">1</a>
+						<a href="one.html" class="circle-button" id="one">1</a>
 					</li>
 					<li>
 						<a href="two.html" class="circle-button" id="two">2</a>
@@ -36,7 +36,7 @@
 						<a href="three.html" class="circle-button" id="three">3</a>
 					</li>
 					<li>
-						<a href="four.html" class="circle-button" id="four">4</a>
+						<a href="four.html" class="circle-button circle-active" id="four">4</a>
 					</li>
 					<!-- <li>
 						<a href="five.html" class="circle-button" id="five">5</a>
@@ -44,14 +44,12 @@
 				</ul>
 			</div>
 		</div>
-			<!-- <div id="tint-content">	 -->
-			<div class="video" id="visible">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/oOwCcwPKa4A" frameborder="0" allowfullscreen></iframe>
-			</div>	
-			<!-- </div>	 -->
+		<div id="visible-text-music">
+			<p class="music"> Listen on <a href="http://gibber.mat.ucsb.edu/?path=drrndyl/publications/Darren%20Doyle">Gibber</a>.</p>
+		</div>	
 			<div class="video" id="hide">
 				<h2 class="main-content">Video</h2>
-				<p class="blurb">You're already here. So feel free to hit this for fun.</p>
+				<p class="blurb">Take a look at some of my video work.</p>
 				<a href="one.html"><img class="main-content-image" src="images/one-img.png" width="285" height="150"></a>
 			</div>	
 			<div class="illustrations" id="hide-two">
@@ -66,9 +64,12 @@
 			</div>	
 			<div class="music" id="hide-four">
 				<h2 class="main-content">Music</h2>
-				<p class="blurb">Listen to some of my coded music.</p>
+				<p class="blurb">You're already here. So feel free to hit this for fun.</p>
 				<a href="two.html"><img class="main-content-image" src="images/four-img.png" width="285" height="150"></a>
 			</div>	
+			<div>
+				<p id="welcome">Welcome.</p>
+			</div>
 		<div id="footer">
 			<ul class="social-icons">
 				<li id="twitter-icon">
@@ -82,10 +83,29 @@
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-			$('document').ready(function(){
+		$('document').ready(function(){
+		$('#one').mouseenter(function(){
+			$('#visible-text-music').css("display", "none");
+			$('#hide').css("display", "block");
+			$('#hide').addClass('animated fadeIn');
+		});
+	});
+
+	$('document').ready(function(){
+		$('#one').mouseleave(function(){
+			$("#hide").removeClass('animated fadeIn');
+			$('#hide').css("display", "none");
+			$('#visible-text-music').addClass('animated fadeIn');
+			$("#visible-text-music").css("display", "block");
+		});
+	});
+
+		$('document').ready(function(){
 			$('#two').mouseenter(function(){
-				$('#visible').css("display", "none");
+				$('#visible-text-music').css("display", "none");
 				$('#hide-two').css("display", "block");
 				$('#hide-two').addClass('animated fadeIn');
 			});
@@ -96,14 +116,14 @@
 			$('#two').mouseleave(function(){
 				$("#hide-two").removeClass('animated fadeIn');
 				$("#hide-two").css("display", "none");
-				$('#visible').addClass('animated fadeIn');
-				$('#visible').css("display", "block");
+				$('#visible-text-music').addClass('animated fadeIn');
+				$('#visible-text-music').css("display", "block");
 			});
 		});
 
 			$('document').ready(function(){
 			$('#three').mouseenter(function(){
-				$('#visible').css("display", "none");
+				$('#visible-text-music').css("display", "none");
 				$('#hide-three').css("display", "block");
 				$('#hide-three').addClass('animated fadeIn');
 			});
@@ -114,68 +134,8 @@
 			$('#three').mouseleave(function(){
 				$("#hide-three").removeClass('animated fadeIn');
 				$("#hide-three").css("display", "none");
-				$('#visible').addClass('animated fadeIn');
-				$('#visible').css("display", "block");
-			});
-		});
-
-			$('document').ready(function(){
-			$('#four').mouseenter(function(){
-				$('#visible').css("display", "none");
-				$('#hide-four').css("display", "block");
-				$('#hide-four').addClass('animated fadeIn');
-			});
-		});
-
-
-		$('document').ready(function(){
-			$('#four').mouseleave(function(){
-				$("#hide-four").removeClass('animated fadeIn');
-				$("#hide-four").css("display", "none");
-				$('#visible').addClass('animated fadeIn');
-				$('#visible').css("display", "block");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#visible").mouseenter(function(){
-				$("#wrapper").removeClass("tint-remove");
-				$("#wrapper").addClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#one").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#two").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#three").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#four").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#name-home").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
+				$('#visible-text-music').addClass('animated fadeIn');
+				$('#visible-text-music').css("display", "block");
 			});
 		});
 	</script>
