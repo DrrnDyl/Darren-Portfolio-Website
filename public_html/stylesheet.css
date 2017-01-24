@@ -1,15 +1,28 @@
-html{
+html.overlay {
 	height: 100%;
-	background: url(images/bg_img1.jpg) no-repeat center center fixed; 
+	/*width: 100%;*/
+	margin: 0;
+	background-color: #ecf0f1;
+}
+
+html.background {
+	height: 100%;
+	width: 100%;
+	background: url(images/bg_img2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#wrapper{ 
-	height: 100%;
+body{
+	overflow: hidden;
+	height: 0;
+}
+
+#wrapper{
 	width: 100%;
+	height: 100%;
 }
 
 .tint {
@@ -32,22 +45,90 @@ html{
     background-color: rgba(255, 255, 255, .0);
  }
 
+
+#header-home {
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	border-bottom: 1px solid rgba(236, 240, 241, 0.6);
+	display: none;
+	animation-duration: 2s;
+  	animation-delay: .4s;
+}
+
 #header {
 	position: absolute;
 	height: 60px;
 	width: 100%;
 	border-bottom: 1px solid rgba(236, 240, 241, 0.6);
+	display: block;
 }
 
 h1 {
-	color: #FFF;
 	float: right;
 	margin: 15px 30px;
 	font-family: 'Lato', sans-serif;
-	font-size: 24px;
-	color:#E87E04;
+	font-size: 18px;
+	color:#222222;
 	display: inline-block;
 	z-index: 3;
+	display: block;
+}
+
+
+.left{
+	float:left;
+}
+
+.right{
+	float: right;
+}
+
+.right h2{
+	font-size: 42px;
+	font-family: 'Lato', sans-serif;
+}
+
+.right p{
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.mouse-touch{
+	display: block;
+	position: absolute;
+	list-style-type:none;
+	left: 50%;
+	margin-left: -85px;
+	top: 50%;
+	margin-top: -100px;
+	height: 200px;
+	width: 140px;
+	z-index: -1;
+}
+
+button li{
+	margin-bottom: 15px;
+}
+
+button li img{
+	border-radius: 100%; 
+}
+
+/*button li img:hover{
+	border-radius: 100%;
+	height: 105px;
+	width: 105px;
+}
+*/
+
+.mouse, .touch {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	/*border-radius: 100%; */
+}
+
+.visible{
 	display: block;
 }
 
@@ -75,14 +156,13 @@ h1 {
 
 #carousel-home{
 	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
+	position: relative;
+	top: 120px;
+	margin: 0 auto;
 	height: 360px;
 	width: 315px;
-	z-index: -1;
+	animation-duration: 2s;
+	animation-delay: .4s;
 }
 
 #carousel-home .carousel-control{
@@ -124,6 +204,18 @@ h1 {
     background-repeat: no-repeat; 
     }    
 
+#footer-home {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 35px;
+	background-color: rgba(236, 240, 241, 0.6);
+	margin-top: 15px;
+	display: none;
+	animation-duration: 2s;
+    animation-delay: .4s;
+}
+
 #footer {
 	position: absolute;
 	bottom: 0;
@@ -131,6 +223,7 @@ h1 {
 	height: 35px;
 	background-color: rgba(236, 240, 241, 0.6);
 	margin-top: 15px;
+	display: block;
 }
 
 .social-icons{
@@ -161,11 +254,19 @@ h1 {
 	text-align: center;
 }
 
-.portfolio-yellow {
-	color: rgba(241, 196, 15,1.0);
+span.portfolio-yellow {
+	color: #e81f64;
 }
 
 .blurb{
+	color: #222222;
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	border: 1px double solid #FFF;
+}
+
+.blog{
 	color: #FFF;
 	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
@@ -173,42 +274,28 @@ h1 {
 	border: 1px double solid #FFF;
 }
 
-.music{
-	color: #FFF;
-	font-size: 24px;
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	border: 1px double solid #FFF;
-}
-
-.music a {
+.blog a {
 	color: rgba(241, 196, 15,1.0);
 }
 
-.music a:hover{
+.blog a:hover{
 	color: rgba(241, 196, 15,.8);
 }
 
-#welcome{
-	color: #FFF;
-	font-size: 54px;
-	text-align: center;
-	width:600px;
-	display:none;
-}
 
 .nav-button{
 	list-style-type: none;
+	width: 125px;
 }
 
-.circle-button{
-	display: block;
+.circle-button-home{
+	display: none;
 	border-radius: 100%;
 	height: 50px;
 	width: 50px;
 	margin: 10px;
-	background-color: #E87E04;
-	border-color: #E87E04;
+	background-color: #222222;
+	border-color: #222222;
 	transition: all .01s ease;
 	color: #fff;
 	line-height: 50px;
@@ -216,11 +303,47 @@ h1 {
 	padding:0px 0px 0px 0px;
 }
 
+/*Makes nav buttons visible on all the pages it should show up on*/
+.circle-button{
+	display: block;
+	border-radius: 100%;
+	height: 50px;
+	width: 50px;
+	margin: 10px;
+	background-color: #222222;
+	border-color: #222222;
+	transition: all .01s ease;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	padding:0px 0px 0px 0px;
+}
+
+#one {
+  animation-duration: 2s;
+  animation-delay: .1s;
+}
+
+#two{
+  animation-duration: 2s;
+  animation-delay: .2s;
+}
+
+#three{
+  animation-duration: 2s;
+  animation-delay: .3s;
+}
+
+#four{
+animation-duration: 2s;
+  animation-delay: .4s;
+}
+
 .circle-button:hover {
 	height: 55px;
 	width: 55px;
 	line-height: 55px;
-	background-color: #ec971f;
+	background-color: #111111;
 	color:#fff;
 	text-decoration: none;
 }
@@ -236,8 +359,8 @@ h1 {
 	height: 50px;
 	width: 50px;
 	margin: 10px;
-	background-color: #F4B350;
-	border-color: #F4B350;
+	background-color: #444444;
+	border-color: #444444;
 	transition: all .01s ease;
 	color: #fff;
 	line-height: 50px;
@@ -249,7 +372,7 @@ h1 {
 	height: 55px;
 	width: 55px;
 	line-height: 55px;
-	background-color: #F4B350;
+	background-color: #444444;
 	color:#fff;
 	text-decoration: none;
 }
@@ -278,89 +401,59 @@ h1 {
     vertical-align: middle;
 }
 
-.main-content-image{
-	margin-top: 20px;
-	margin-left:15px;
-	margin-right: 15px;
-}
 /*Main content which is hidden*/
-#hide {
+.past-projects, .current-projects, .random {
 	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
-	height: 360px;
-	width: 315px;
-	z-index: -1;
-	border: 1px solid #FFF;
+	margin-top: 110px; 
 }
 
-#hide-two {
+.past-projects-no-margin, .current-projects-no-margin, .random-no-margin{
 	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
-	height: 360px;
-	width: 315px;
-	z-index: -1;
-	border: 1px solid #FFF;
+	margin-top: 0px;
 }
 
-#hide-three {
-	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
-	height: 360px;
-	width: 315px;
-	z-index: -1;
-	border: 1px solid #FFF;
+.past-projects p, .current-projects p, .random p {
+	margin-top: 10px; 
 }
 
-#hide-four {
-	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
-	height: 360px;
-	width: 315px;
-	z-index: -1;
-	border: 1px solid #FFF;
+.past-projects h2, .past-projects-visible h2, .current-projects h2, .current-projects-visible h2, 
+.random h2, .random-visible h2, .past-projects-no-margin h2, .current-projects-no-margin h2, 
+.random-no-margin h2{
+	text-decoration: underline;
+	/*-moz-text-decoration-color: #4555A5;  Code for Firefox */
+    /*text-decoration-color: #4555A5;*/
 }
 
-#hide-five {
-	display: none;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
-	height: 360px;
-	width: 315px;
+.past-projects-mobile, .current-projects-mobile, .random-mobile {
+	display: none; 
 	z-index: -1;
-	border: 1px solid #FFF;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 110px;
 }
-
-#visible {
+/*Makes the main content visible on their respective pages*/
+.past-projects-visible, .current-projects-visible, .random-visible{
 	display: block;
-	position: absolute;
-	left: 50%;
-	margin-left: -280px;
-	top: 50%;
-	margin-top: -157.5px;
-	z-index: -1;
+	margin-top: 110px;
+	padding-right: 210px; 
 }
 
-#visible-text {
-	display: block;
+.past-projects-visible a, .current-projects-visible a, .random-projects-visible a{
+	color: #4555A5;  
+}
+
+#touch-text {
+	display: none;
+	position: relative;
+	top: 110px;
+	width: 315px;
+	margin: 0 auto;
+	animation-duration: 2s;
+	animation-delay: .4s;
+}
+
+#mouse-text {
+	display: none;
 	position: absolute;
 	left: 50%;
 	margin-left: -157.5px;
@@ -371,24 +464,6 @@ h1 {
 	z-index: -1;
 }
 
-#visible-text-music {
-	display: block;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -17px;
-	height: 34px;
-	width: 315px;
-	z-index: -1;
-}
-
-
-.carousel-illustrations {
-	display: block;
-	position: absolute;
-	z-index: -1;
-}
 
 /*Media queries*/
 @media only screen and (max-width: 767px) {
@@ -397,19 +472,31 @@ h1 {
 		margin-bottom: 5px; 
 	}
 
-	.nav-bar-mobile{
-		display: block;
+	.past-projects p, .current-projects p, .random p, .past-projects h2, .current-projects h2, .random h2{
+	padding-left: 40px; 
 	}
+
+	/*.nav-bar-mobile{
+		display: block;
+	}*/
 	.nav-button {
 		display: none;}
-
-	p.blurb {
-		display: none; 	
-	}
-	#name-home {
-		display: none;
-	}
 }
+
+@media only screen and (max-width: 414px) {
+	h1{ font-size: 12px;
+	 }
+
+.past-projects h2, .current-projects h2, .random h2{
+	font-size: 24px; 
+	padding-left: 60px;
+	}
+
+.past-projects p, .current-projects p, .random p{
+	font-size: 12px;
+	padding-left: 60px;
+	}	
+}	
 
 @media only screen and (max-height: 515px) {
 	#carousel-example-generic {

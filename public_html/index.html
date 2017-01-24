@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html id="page" class="overlay">
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 	
@@ -12,98 +16,74 @@
 <meta charset="UTF-8">
 <title>Darren Doyle</title>
 </head>
-
 <body>
-	<div id="header">
-		<a href="index.html" id="name-home"><h1>Darren Doyle</h1></a>
+	<div id="header-home">
+		<a href="index.html" id="name-home"><h1>Mouse | Touch</h1></a>
 	</div>
-	<!-- <div id="hide-tint"> -->
-	<div class="wrapper">
-		<div class="centre">
+		<div id="interface-choice" class="interface-choice">
+			<ul class="mouse-touch">
+				<button id="mouse" class="mouse"><li>
+					<img id="choice-one" src="images/mouse-button-blue-yellow.svg" width="100" height="100">
+				</li></button>
+				<button id="touch" class="touch"><li>
+					<img id="choice-two" src="images/touch-button-blue-pink.svg" width="100" height="100">
+				</li></button>
+			</ul>
+		</div>
+		<div class="centre col-2 left">
 			<div class="nest">
-				<ul class="nav-button">
+				<ul id="nav-button" class= "nav-button" >
 					<li>
-						<a href="one.html" class="circle-button" id="one">1</a>
+						<a href="one.html" class="circle-button-home" id="one">1</a>
 					</li>
 					<li>
-						<a href="two.html" class="circle-button" id="two">2</a>
+						<a href="two.html" class="circle-button-home" id="two">2</a>
 					</li>
 					<li>
-						<a href="three.html" class="circle-button" id="three">3</a>
+						<a href="three.html" class="circle-button-home" id="three">3</a>
 					</li>
-					<li>
-						<a href="four.html" class="circle-button" id="four">4</a>
-					</li>
+					<!-- <li>
+						<a href="four.html" class="circle-button-home" id="four">4</a>
+					</li> -->
 					<!-- <li>
 						<a href="five.html" class="circle-button" id="five">5</a>
 					</li> -->
 				</ul>
 			</div>
 		</div>
-		<div class="video" id="hide">
-			<h2 class="main-content">Video</h2>
-			<p class="blurb">Take a look at some of my video work.</p>
-			<a href="one.html"><img class="main-content-image" src="images/one-img.png" width="285" height="150" alt="Menu one"></a>
-		</div>	
-		<div class="illustrations" id="hide-two">
-			<h2 class="main-content">Illustrations</h2>
-			<p class="blurb">Flip through some of my illustrations.</p>
-			<a href="two.html"><img class="main-content-image" src="images/two-img.png" width="285" height="150" alt="Menu two"></a>
-		</div>	
-		<div class="animations" id="hide-three">
-			<h2 class="main-content">Animations</h2>
-			<p class="blurb">Check out some of my animations.</p>
-			<a href="three.html"><img class="main-content-image" src="images/three-img.png" width="285" height="150" alt="Menu three"></a>
-		</div>	
-		<div class="music" id="hide-four">
-			<h2 class="main-content">Music</h2>
-			<p class="blurb">Listen to some of my coded music.</p>
-			<a href="four.html"><img class="main-content-image" src="images/four-img.png" width="285" height="150" alt="Menu four"></a>
-		</div>	
-		<!-- <div class="illustrations" id="hide-five">
-			<h2 class="main-content">Illustrations</h2>
-			<p class="blurb">Button two gives you awesome illustrations.</p>
-			<a href="two.html"><img class="main-content-image" src="images/one-img1.jpg" width="285" height="150"></a>
-		</div>	 -->
-		<div id="carousel-home" class="carousel slide" data-ride="carousel" data-interval="false">
-		  	<!-- Indicators -->
-			  <ol class="carousel-indicators">
-			    <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-			    <li data-target="#carousel-home" data-slide-to="1"></li>
-			    <li data-target="#carousel-home" data-slide-to="2"></li>
-			    <li data-target="#carousel-home" data-slide-to="3"></li>
-			  </ol>
-
-			  <!-- Wrapper for slides -->
-			  <div class="carousel-inner" role="listbox">
-			    <div class="item active">
-			      <a href="one.html"><img src="images/one-img.png" alt="First slide"></a>
-			    </div>
-			    <div class="item">
-			      <a href="two.html"><img src="images/two-img.png" alt="Second slide"></a>
-			    </div>
-			    <div class="item">
-			      <a href="three.html"><img src="images/three-img.png" alt="Third slide"></a>
-			    </div>
-			    <div class="item">
-			      <a href="four.html"><img src="images/four-img.png" alt="Fourth slide"></a>
-			    </div>
-		  </div>
-	
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
+		
+		<!-- main page content, portfolio links -->
+		<div id="past-projects" class="past-projects col-10 right">
+			<h2>Past Projects</h2>
+			<p>Yep, these are all done.</p>
+		</div >
+		<div id="current-projects" class="current-projects col-10 right">
+			<h2>Current Projects</h2>
+			<p>These are all of my ongoing projects.</p>
 		</div>
-		<div id="visible-text" class="nav-guide">
+		<div id="random" class="random col-10 right">
+			<h2>Random</h2>
+			<p>These aren't really projects and are fairly random.</p>
+		</div>
+
+		<div id="past-projects-mobile" class="past-projects-mobile col-4">
+			<h2>Past Projects</h2>
+			<p>These are all done.</p>
+		</div >
+		<div id="current-projects-mobile" class="current-projects-mobile col-4">
+			<h2>Current Projects</h2>
+			<p>These are all of my ongoing projects.</p>
+		</div>
+		<div id="random-mobile" class="random-mobile col-4">
+			<h2>Random</h2>
+			<p>These aren't really projects and are fairly random.</p>
+		</div>
+		<!-- Navigation help text so users don't get lost in the UI's pretty designs -->
+		<div id="mouse-text" class="nav-guide">
 			<p class="blurb"><span class="portfolio-yellow">Hello.</span> <br> Click one of the buttons on the left to navigate.</p>
 		</div>	
-		<div id="footer">
+		<!-- Your average footer -->
+		<div id="footer-home">
 			<ul class="social-icons">
 				<li id="twitter-icon">
 					<a href="https://twitter.com/DrrnDyl"><img src="images/twitter-logo-yellow.png" height="25" width="25" alt="My Twitter profile"></a>
@@ -113,91 +93,103 @@
 				</li>
 			</ul>
 		</div>
-	</div>		
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 		<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	$('document').ready(function(){
 		$('#one').mouseenter(function(){
-			$('#visible-text').css("display", "none");
-			$('#hide').css("display", "block");
-			$('#hide').addClass('animated fadeIn');
+			$('#mouse-text').css("display", "none");
+			$('#past-projects').css("display", "block");
+			$('#past-projects').addClass('animated fadeIn');
 		});
-	});
 
-	$('document').ready(function(){
 		$('#one').mouseleave(function(){
-			$("#hide").removeClass('animated fadeIn');
-			$("#hide").css("display", "none");
-			$('#visible-text').css("display", "block");
-			$('#visible-text').addClass('animated fadeIn');
+			$("#past-projects").removeClass('animated fadeIn');
+			$("#past-projects").css("display", "none");
+			$('#mouse-text').css("display", "block");
+			$('#mouse-text').addClass('animated fadeIn');
 		});
-	});
 
-	$('document').ready(function(){
 		$('#two').mouseenter(function(){
-			$('#visible-text').css("display", "none");
-			$('#hide-two').css("display", "block");
-			$('#hide-two').addClass('animated fadeIn');
+			$('#mouse-text').css("display", "none");
+			$('#current-projects').css("display", "block");
+			$('#current-projects').addClass('animated fadeIn');
 		});
-	});
 
-	$('document').ready(function(){
+
 		$('#two').mouseleave(function(){
-			$("#hide-two").removeClass('animated fadeIn');
-			$("#hide-two").css("display", "none");
-			$('#visible-text').css("display", "block");
-			$('#visible-text').addClass('animated fadeIn');
+			$("#current-projects").removeClass('animated fadeIn');
+			$("#current-projects").css("display", "none");
+			$('#mouse-text').css("display", "block");
+			$('#mouse-text').addClass('animated fadeIn');
 		});
-	});
-	$('document').ready(function(){
+
 		$('#three').mouseenter(function(){
-			$('#visible-text').css("display", "none");
-			$('#hide-three').css("display", "block");
-			$('#hide-three').addClass('animated fadeIn');
+			$('#mouse-text').css("display", "none");
+			$('#random').css("display", "block");
+			$('#random').addClass('animated fadeIn');
 		});
-	});
 
-	$('document').ready(function(){
 		$('#three').mouseleave(function(){
-			$("#hide-three").removeClass('animated fadeIn');
-			$("#hide-three").css("display", "none");
-			$('#visible-text').css("display", "block");
-			$('#visible-text').addClass('animated fadeIn');
+			$("#random").removeClass('animated fadeIn');
+			$("#random").css("display", "none");
+			$('#mouse-text').css("display", "block");
+			$('#mouse-text').addClass('animated fadeIn');
 		});
-	});
 
-	$('document').ready(function(){
-		$('#four').mouseenter(function(){
-			$('#visible-text').css("display", "none");
-			$('#hide-four').css("display", "block");
-			$('#hide-four').addClass('animated fadeIn');
-		});
-	});
+		$('#choice-one').mouseenter(function(){
+        	$('#choice-one').attr('src','images/mouse-button-blue-black.svg');
+        });
 
-	$('document').ready(function(){
-		$('#four').mouseleave(function(){
-			$("#hide-four").removeClass('animated fadeIn');
-			$("#hide-four").css("display", "none");
-			$('#visible-text').css("display", "block");
-			$('#visible-text').addClass('animated fadeIn');
-		});
-	});
-	$('document').ready(function(){
-		$('#five').mouseenter(function(){
-			$('#visible-text').css("display", "none");
-			$('#hide-five').css("display", "block");
-			$('#hide-five').addClass('animated fadeIn');
-		});
-	});
+        $('#choice-one').mouseleave(function(){
+        	$('#choice-one').attr('src','images/mouse-button-blue-yellow.svg');
+        });
 
-	$('document').ready(function(){
-		$('#five').mouseleave(function(){
-			$("#hide-five").removeClass('animated fadeIn');
-			$("#hide-five").css("display", "none");
-			$('#visible-text').css("display", "block");
-			$('#visible-text').addClass('animated fadeIn');
+        $('#choice-two').mouseenter(function(){
+        	$('#choice-two').attr('src','images/touch-button-blue-black.svg');
+        });
+
+        $('#choice-two').mouseleave(function(){
+        	$('#choice-two').attr('src','images/touch-button-blue-pink.svg');
+        });
+
+
+		$('#mouse').click(function(){
+			$('#interface-choice').css("display", "none");
+			$("#page").removeClass('overlay');
+			$('#page').addClass('background');
+			$('#nav-button').css("display", "block");
+			$('#one').addClass('animated bounceInLeft');
+			$('#one').css("display", "block");
+			$('#two').addClass('animated bounceInLeft');
+			$('#two').css("display", "block");
+			$('#three').addClass('animated bounceInLeft');
+			$('#three').css("display", "block");
+			$('#four').addClass('animated bounceInLeft');
+			$('#four').css("display", "block");
+			$('#header-home').css("display", "block");
+			$('#header-home').addClass('animated slideInDown');
+			$('#footer-home').css("display", "block");
+			$('#footer-home').addClass('animated slideInUp');
+			$('#mouse-text').css("display", "block");
+		});
+
+		$('#touch').click(function(){
+			$('#interface-choice').css("display", "none");
+			$("#page").removeClass('overlay');
+			$('#page').addClass('background');
+			$('#touch-text').css("display", "block");
+			$('#touch-text').addClass("animated slideInDown");
+			$('#carousel-home').css("display", "block");
+			$('#carousel-home').addClass("animated slideInUp");
+			$('#header-home').css("display", "block");
+			$('#header-home').addClass('animated slideInDown');
+			$('#footer-home').css("display", "block");
+			$('#footer-home').addClass('animated slideInUp');
+			$('#past-projects-mobile').css("display", "block");
+			$('#current-projects-mobile').css("display", "block");
+			$('#random-mobile').css("display", "block");
 		});
 	});
 </script>

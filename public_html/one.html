@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html id="page" class="background">
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 
@@ -14,20 +18,14 @@
 </head>
 <body>
 	<div id="header">
-		<ul class="nav-bar-mobile">
-			<a href="index.html"><li>Home</li></a>
-			<a href="two.html"><li>Illustrations</li></a>
-			<a href="three.html"><li>Animations</li></a>
-			<a href="four.html"><li>Music</li>
-		</ul>
-		<a href="index.html" id="name-home"><h1>Darren Doyle</h1></a>
+		<a href="index.html" id="name-home"><h1>Mouse | Touch</h1></a>
 	</div>
 	<div id="wrapper" class="wrapper">
-		<div class="centre">
+		<div class="centre col-2 left">
 			<div class="nest">
-				<ul class="nav-button">
+				<ul id="nav-button" class="nav-button">
 					<li>
-						<a href="one.html" class="circle-button circle-active" id="one">1</a>
+						<a href="one.html" class="circle-active" id="one">1</a>
 					</li>
 					<li>
 						<a href="two.html" class="circle-button" id="two">2</a>
@@ -35,9 +33,9 @@
 					<li>
 						<a href="three.html" class="circle-button" id="three">3</a>
 					</li>
-					<li>
-						<a href="four.html" class="circle-button" id="four">4</a>
-					</li>
+					<!-- <li>
+						<a href="four.html" class="circle-button-home" id="four">4</a>
+					</li> -->
 					<!-- <li>
 						<a href="five.html" class="circle-button" id="five">5</a>
 					</li> -->
@@ -45,30 +43,37 @@
 			</div>
 		</div>
 			<!-- <div id="tint-content">	 -->
-			<div class="video" id="visible">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/oOwCcwPKa4A" frameborder="0" allowfullscreen></iframe>
+			<!-- main page content, portfolio links -->
+		<div id="past-projects" class="past-projects-visible col-10 right">
+			<h2 id="sub-heading">Past Projects</h2>
+			<div id="par-active">
+				<p><a href="www.workspce.com">Worksp_ce</a> is a blog on technology, writing and design which I designed and built (and probably should update more regularly).</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet lorem sed tellus eleifend ornare. Vestibulum ac dui sagittis, commodo neque at, ornare nisl.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet lorem sed tellus eleifend ornare. Vestibulum ac dui sagittis, commodo neque at, ornare nisl. </p>
+				<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet lorem sed tellus eleifend ornare. Vestibulum ac dui sagittis, commodo neque at, ornare nisl. </p>
 			</div>	
-			<!-- </div>	 -->
-			<div class="video" id="hide">
-				<h2 class="main-content">Video</h2>
-				<p class="blurb">You're already here. So feel free to hit this for fun.</p>
-				<a href="one.html"><img class="main-content-image" src="images/one-img.png" width="285" height="150" alt="Menu one"></a>
-			</div>	
-			<div class="illustrations" id="hide-two">
-				<h2 class="main-content">Illustrations</h2>
-				<p class="blurb">Flip through some of my illustrations.</p>
-				<a href="two.html"><img class="main-content-image" src="images/two-img.png" width="285" height="150" alt="Menu two"></a>
-			</div>	
-			<div class="animations" id="hide-three">
-				<h2 class="main-content">Animations</h2>
-				<p class="blurb">Check out some of my animations.</p>
-				<a href="two.html"><img class="main-content-image" src="images/three-img.png" width="285" height="150" alt="Menu three"></a>
-			</div>	
-			<div class="music" id="hide-four">
-				<h2 class="main-content">Music</h2>
-				<p class="blurb">Listen to some of my coded music.</p>
-				<a href="two.html"><img class="main-content-image" src="images/four-img.png" width="285" height="150" alt="Menu four"></a>
-			</div>	
+		</div >
+		<div id="current-projects" class="current-projects-no-margin col-10 right">
+			<h2>Current Projects</h2>
+			<p>These are all of my ongoing projects.</p>
+		</div>
+		<div id="random" class="random-no-margin col-10 right">
+			<h2>Random</h2>
+			<p>All the stuff I don't know how to categorize.</p>
+		</div>
+
+		<div id="past-projects-mobile" class="past-projects-mobile col-4">
+			<h2>Past Projects</h2>
+			<p>These are all done.</p>
+		</div >
+		<div id="current-projects-mobile" class="current-projects-mobile col-4">
+			<h2>Current Projects</h2>
+			<p>These are all of my ongoing projects.</p>
+		</div>
+		<div id="random-mobile" class="random-mobile col-4">
+			<h2>Random</h2>
+			<p>These aren't really projects and are fairly random.</p>
+		</div>
 		<div id="footer">
 			<ul class="social-icons">
 				<li id="twitter-icon">
@@ -84,100 +89,42 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 			$('document').ready(function(){
+				$('#par-active').addClass("animated fadeIn");
+				$('#par-active').css("display", "block");				
+				$('#nav-button').css("display", "block");	
+
 			$('#two').mouseenter(function(){
-				$('#visible').css("display", "none");
-				$('#hide-two').css("display", "block");
-				$('#hide-two').addClass('animated fadeIn');
+				$('#par-active').css("display", "none");
+				$('#sub-heading').css("display", "none");
+				$('#current-projects').css("display", "block");
+				$('#current-projects').addClass('animated fadeIn');
 			});
-		});
 
-
-		$('document').ready(function(){
 			$('#two').mouseleave(function(){
-				$("#hide-two").removeClass('animated fadeIn');
-				$("#hide-two").css("display", "none");
-				$('#visible').addClass('animated fadeIn');
-				$('#visible').css("display", "block");
+				$("#current-projects").removeClass('animated fadeIn');
+				$("#current-projects").css("display", "none");
+				$('#par-active').css("display", "block");
+				$('#par-active').addClass('animated fadeIn');
+				$('#sub-heading').css("display", "block");
+				$('#sub-heading').addClass('animated fadeIn');
 			});
-		});
 
-			$('document').ready(function(){
 			$('#three').mouseenter(function(){
-				$('#visible').css("display", "none");
-				$('#hide-three').css("display", "block");
-				$('#hide-three').addClass('animated fadeIn');
+				$('#par-active').css("display", "none");
+				$('#sub-heading').css("display", "none");
+				$('#random').css("display", "block");
+				$('#random').addClass('animated fadeIn');
 			});
-		});
 
-
-		$('document').ready(function(){
 			$('#three').mouseleave(function(){
-				$("#hide-three").removeClass('animated fadeIn');
-				$("#hide-three").css("display", "none");
-				$('#visible').addClass('animated fadeIn');
-				$('#visible').css("display", "block");
+				$("#random").removeClass('animated fadeIn');
+				$("#random").css("display", "none");
+				$('#par-active').css("display", "block");
+				$('#par-active').addClass('animated fadeIn');
+				$('#sub-heading').css("display", "block");
+				$('#sub-heading').addClass('animated fadeIn');
 			});
-		});
-
-			$('document').ready(function(){
-			$('#four').mouseenter(function(){
-				$('#visible').css("display", "none");
-				$('#hide-four').css("display", "block");
-				$('#hide-four').addClass('animated fadeIn');
-			});
-		});
-
-
-		$('document').ready(function(){
-			$('#four').mouseleave(function(){
-				$("#hide-four").removeClass('animated fadeIn');
-				$("#hide-four").css("display", "none");
-				$('#visible').addClass('animated fadeIn');
-				$('#visible').css("display", "block");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#visible").mouseenter(function(){
-				$("#wrapper").removeClass("tint-remove");
-				$("#wrapper").addClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#one").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#two").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#three").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#four").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
-
-		$('document').ready(function(){
-			$("#name-home").mouseenter(function(){
-				$("#wrapper").addClass("tint-remove");
-				$("#wrapper").removeClass("tint");
-			});
-		});
+		});	
 	</script>
 </body>
 
