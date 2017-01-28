@@ -64,6 +64,7 @@ body{
 	display: block;
 }
 
+
 h1 {
 	float: right;
 	margin: 15px 30px;
@@ -73,6 +74,8 @@ h1 {
 	display: inline-block;
 	z-index: 3;
 	display: block;
+	border-bottom: 1px solid #e81f64;
+	padding-bottom: 2px;
 }
 
 
@@ -132,78 +135,6 @@ button li img{
 	display: block;
 }
 
-.nav-bar-mobile {
-	width: 450px;
-	margin: 0 auto;
-	display: none;
-}
-
-.nav-bar-mobile li{
-	display:inline-block;
-	margin: 22px 8px 0px 8px;
-	width: 75px;
-}
-
-.nav-bar-mobile a{
-	text-decoration: none;
-	color: #E87E04;
-	font-size: 14px;
-	border: 1px solid #FFF;
-	border-radius: 2px; 
-	font-family: 'Maitree', serif;
-	text-align: center;
-}
-
-#carousel-home{
-	display: none;
-	position: relative;
-	top: 120px;
-	margin: 0 auto;
-	height: 360px;
-	width: 315px;
-	animation-duration: 2s;
-	animation-delay: .4s;
-}
-
-#carousel-home .carousel-control{
-	bottom: 200px;
-}
-
-#carousel-home .carousel-indicators{
-	bottom: 150px;
-}
-
-
-#carousel-example-generic{
-	display: block;
-	position: absolute;
-	left: 50%;
-	margin-left: -157.5px;
-	top: 50%;
-	margin-top: -180px;
-	height: 360px;
-	width: 315px;
-	z-index: -1;
-}
-
-#carousel-example-generic .carousel-control {
-	bottom: 70px;
-}
-
-#carousel-example-generic .carousel-indicators {
-	bottom: 0px;
-}
-
-.carousel-control.left {
-    background-image: none;
-    background-repeat: no-repeat; 
-    }
-
-.carousel-control.right {
-    background-image: none;
-    background-repeat: no-repeat; 
-    }    
-
 #footer-home {
 	position: absolute;
 	bottom: 0;
@@ -226,7 +157,7 @@ button li img{
 	display: block;
 }
 
-.social-icons{
+.social-icons {
 	margin: 0 auto;
 	width: 60px;
 	list-style-type: none;
@@ -424,13 +355,23 @@ animation-duration: 2s;
     /*text-decoration-color: #4555A5;*/
 }
 
-.past-projects-mobile, .current-projects-mobile, .random-mobile {
+.projects-mobile {
+	position: absolute;
 	display: none; 
-	z-index: -1;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 110px;
+	margin-top: 110px;
 }
+
+.projects-mobile h2 {
+	font-size: 30px;
+}
+
+.projects-mobile p {
+	font-size: 18px;
+}
+
+
 /*Makes the main content visible on their respective pages*/
 .past-projects-visible, .current-projects-visible, .random-visible{
 	display: block;
@@ -476,9 +417,6 @@ animation-duration: 2s;
 	padding-left: 40px; 
 	}
 
-	/*.nav-bar-mobile{
-		display: block;
-	}*/
 	.nav-button {
 		display: none;}
 }

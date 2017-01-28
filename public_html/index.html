@@ -16,7 +16,7 @@
 <meta charset="UTF-8">
 <title>Darren Doyle</title>
 </head>
-<body>
+<body id="body">
 	<div id="header-home">
 		<a href="index.html" id="name-home"><h1>Mouse | Touch</h1></a>
 	</div>
@@ -66,33 +66,36 @@
 			<p>These aren't really projects and are fairly random.</p>
 		</div>
 
-		<div id="past-projects-mobile" class="past-projects-mobile col-4">
+		<div id="projects-mobile" class="projects-mobile col-12">
 			<h2>Past Projects</h2>
-			<p>These are all done.</p>
-		</div >
-		<div id="current-projects-mobile" class="current-projects-mobile col-4">
+			<p><a href="www.workspce.com">Worksp_ce</a> is a blog on technology, writing and design which I designed and built (and probably should update more regularly).</p>
+
 			<h2>Current Projects</h2>
-			<p>These are all of my ongoing projects.</p>
-		</div>
-		<div id="random-mobile" class="random-mobile col-4">
+			<p>I contribute to Anchor CMS's documentation. Take a look at <a href="https://github.com/DrrnDyl">GitHub</a> for a better idea of my contributions.</p>
+
+			<p>Working alongside an agency, I'm in charge of creating marketing content for a financial services company who serve over 500,000 customers. Content has included social media posts, blogs and three ebooks. Check out <a href="utc-financial-planning-faw.pdf">ebook one</a> (which got 2000+ leads) and <a href="utc-investing-in-financial-goals.pdf">ebook two</a>. Designs by <a href="https://twitter.com/tippa_tone?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">@tippa_tone</a>.</p>
+		
+			<p>This one is a little weird. I'm building an app that explores privacy in relation to smartphones and app permissions as part of my MA in New Media. The app will randomly record audio/video without prior user knowledge. These snippets can later be viewed by users to see how they feel about it. Concept work <a href="https://marvelapp.com/3e700e1">here</a></p>
+
 			<h2>Random</h2>
-			<p>These aren't really projects and are fairly random.</p>
+			<p>Working on updating this with content.</p>
 		</div>
 		<!-- Navigation help text so users don't get lost in the UI's pretty designs -->
 		<div id="mouse-text" class="nav-guide">
 			<p class="blurb"><span class="portfolio-yellow">Hello.</span> <br> Click one of the buttons on the left to navigate.</p>
 		</div>	
+		
 		<!-- Your average footer -->
 		<div id="footer-home">
 			<ul class="social-icons">
 				<li id="twitter-icon">
-					<a href="https://twitter.com/DrrnDyl"><img src="images/twitter-logo-yellow.png" height="25" width="25" alt="My Twitter profile"></a>
+					<a href="https://twitter.com/DrrnDyl"><img src="images/twitter-logo-black.png" height="25" width="25" alt="My Twitter profile"></a>
 				</li>	
 				<li id= "medium-icon">	
-					<a href="https://medium.com/@workspce"><img src="images/medium-yellow.png" height="25" width="25" alt="My Medium profile"></a>
+					<a href="https://medium.com/@workspce"><img src="images/medium-black.png" height="25" width="25" alt="My Medium profile"></a>
 				</li>
 			</ul>
-		</div>
+		</sdiv>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 		<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -187,12 +190,13 @@
 			$('#header-home').addClass('animated slideInDown');
 			$('#footer-home').css("display", "block");
 			$('#footer-home').addClass('animated slideInUp');
-			$('#past-projects-mobile').css("display", "block");
+			$('#projects-mobile').css("display", "block");
 			$('#current-projects-mobile').css("display", "block");
 			$('#random-mobile').css("display", "block");
+			$('#body').css("overflow-y", "scroll")
 		});
 	});
-</script>
+	</script>
 </body>
 
 </html>
