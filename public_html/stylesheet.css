@@ -107,11 +107,11 @@ h1 {
 	z-index: -1;
 }
 
-button li{
+.mouse-touch li{
 	margin-bottom: 15px;
 }
 
-button li img{
+.mouse-touch img{
 	border-radius: 100%; 
 }
 
